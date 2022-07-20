@@ -4,6 +4,7 @@ import 'package:cscs/models/footer_item.dart';
 import 'package:cscs/utils/constants.dart';
 import 'package:cscs/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final List<FooterItem> footerItems = [
   FooterItem(
@@ -17,7 +18,9 @@ final List<FooterItem> footerItems = [
       title: "MEMBER",
       text1: "Yusuke Kaneoka",
       text2: "",
-      onTap: () {}),
+      onTap: () {
+        launch("https://twitter.com/8140i2865_3");
+      }),
   FooterItem(
       iconData: Icons.location_on,
       title: "ADDRESS",
@@ -160,7 +163,28 @@ Widget _buildUi(double width, BuildContext context) {
                     ),
                   ),
                 ],
+              ),
+              Flex(
+                direction: Axis.horizontal,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      launch("https://github.com/AgnelSelvan/Flutter-Web-Portfolio");
+                    },
+                    child: const Padding(
+                      padding: EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        "And using template → AgnelSelvan/Flutter-Web-Portfolio",
+                        style: TextStyle(
+                          color: kCaptionColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               )
+
             ],
           );
         },

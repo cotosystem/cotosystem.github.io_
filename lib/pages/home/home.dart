@@ -76,7 +76,7 @@ class _HomeState extends ConsumerState<Home>
                       height: 5,
                     ),
                     Text(
-                      "Here are some of my Previous Work :)",
+                      "Here are some of our Previous Work :)",
                       style: GoogleFonts.josefinSans(
                         color: Colors.grey[400],
                         fontSize: 14,
@@ -89,7 +89,7 @@ class _HomeState extends ConsumerState<Home>
                 )),
                 ProjectModel.projects.isEmpty
                     ? Center(
-                        child: Text("We have no works...",
+                        child: Text("But we have no works...",
                             style: GoogleFonts.josefinSans(
                               color: Colors.grey[400],
                               fontSize: 14,
